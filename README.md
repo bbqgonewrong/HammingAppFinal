@@ -72,6 +72,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 ## Running the App
-Enter 5 digit numbers ranging from 0000-9999 in the form.
+Enter Five, 5 digit numbers ranging from 0000-9999 in the form. The numbers are then sorted internally.
 Click on the calculate Hamming Distance button.
 You will see the Hamming distance between the values using the Routing table.
+More information about the application can also be found using the Pop-up built in.
+
+## Known limitations
+The application is built stateless as it does not contain back-end. Refreshing the app will cause the data to disappear.
+You can only enter 5 numbers at once for the Hamming distance to be calculated.
