@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../UI/Card';
 import TableRow from './TableRow';
-import './Search.css'
+import './Table.css'
 import { useState } from 'react';
 import Popup from 'reactjs-popup';
 

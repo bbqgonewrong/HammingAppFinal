@@ -1,9 +1,9 @@
 import React from 'react';
 import Card from '../UI/Card';
 
-import './IngredientList.css';
+import './HammingHistory.css';
 
-const IngredientList = props => {
+const HammingHistory = props => {
   return (
 
     <section className="ingredient-list">
@@ -28,4 +28,4 @@ const IngredientList = props => {
   );
 };
 
-export default IngredientList;
+export default HammingHistory;

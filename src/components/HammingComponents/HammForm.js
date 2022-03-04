@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import Card from '../UI/Card';
-import './IngredientForm.css';
+import './HammForm.css';
 
-const IngredientForm = React.memo(props => {
+const HammForm = React.memo(props => {
   const [number1, setNumber1] = useState('');
   const [number2, setNumber2] = useState('');
   const [number3, setNumber3] = useState('');
@@ -90,7 +90,7 @@ function num5Handler(e){
     console.log(`Check for flag:${isEnabled}`)
     if(isEnabled){
       
-      props.onAddIngredient({ userInput1: number1, userInput2: number2,userInput3:number3,userInput4:number4,userInput5:number5 });
+      props.onAddHistory({ userInput1: number1, userInput2: number2,userInput3:number3,userInput4:number4,userInput5:number5 });
       props.onHamm({ userInput1: number1, userInput2: number2,userInput3:number3,userInput4:number4,userInput5:number5 });
     }
     else{
@@ -172,4 +172,4 @@ function num5Handler(e){
   );
 });
 
-export default IngredientForm;
+export default HammForm;

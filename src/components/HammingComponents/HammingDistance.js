@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Table from './Table';
-import IngredientForm from './IngredientForm';
-import IngredientList from './IngredientList';
+import HammForm from './HammForm';
+import HammingHistory from './HammingHistory';
 //import Search from './Search';
 
-var HammingDistance = (x,y) =>{
+var HammingDistanceCalc = (x,y) =>{
     let result = 0
 
     while(x>0 || y>0)
@@ -30,8 +30,8 @@ function make2DArray(cols,rows){
   return arr
 }
 // var testMat = new Array(5)
-const Ingredients = () => {
-  const [userIngredients, setUserIngredients] = useState([]);
+const HammingDistance = () => {
+  const [userHammList, setUserHammList] = useState([]);
   const [userhammingValue, setUserhammingValue] = useState([]);
   const [userSortedValues, setuserSortedValues] = useState([]);
   const [showTable, setshowTable] = useState(false);
@@ -51,7 +51,7 @@ const Ingredients = () => {
         for (let j = 0; j < sortedVals.length; j++) {
           const element2 = sortedVals[j];
 
-          matrix[i][j] = HammingDistance(element1,element2)
+          matrix[i][j] = HammingDistanceCalc(element1,element2)
           console.log(`${element1} and ${element2}`)
           
         }
@@ -64,9 +64,9 @@ const Ingredients = () => {
       );
   }
 
-  const addIngredientHandler = ingredient => {
+  const addHistoryHandler = ingredient => {
     setshowHistory(true)
-    setUserIngredients(prevIngredients => [
+    setUserHammList(prevIngredients => [
       ...prevIngredients,
       { id: Math.random().toString(), ...ingredient }
     ]);
@@ -87,14 +87,14 @@ const Ingredients = () => {
 
   return (
     <div className="App">
-      <IngredientForm onAddIngredient={addIngredientHandler} onHamm={hammingHandler} />
+      <HammForm onAddHistory={addHistoryHandler} onHamm={hammingHandler} />
 
       <section>        
         {showTable?<Table  hammingVal={userhammingValue} header={userSortedValues} />:''}
-        {showHistory?<IngredientList ingredients={userIngredients} onRemoveItem={() => {}} />:''}
+        {showHistory?<HammingHistory ingredients={userHammList} onRemoveItem={() => {}} />:''}
       </section>
     </div>
   );
 };
 
-export default Ingredients;
+export default HammingDistance;

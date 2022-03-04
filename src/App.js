@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Ingredients from './components/Ingredients/Ingredients';
+import HammingDistance from './components/HammingComponents/HammingDistance';
 
 const App = props => {
   return (
     <><div class="header">
       <h1>Hamming Distance Calculator</h1>
-    </div><Ingredients /></>);
+    </div><HammingDistance /></>);
 };
 
 export default App;
