@@ -11,13 +11,17 @@ const Table = props => {
             <section className='ingredient-form'>
                 
                 <Card>
-                <h3>
+                <div className='HammingHeader'>
+                    <h3 style={{span:'left'}}>
                     Hamming Distance Calculator
-                </h3>
+                    </h3>
+                    <button style={{span:'right',fontWeight:'bolder'}}>i</button>
+                </div>    
+                
                 <table className='styled-table'>
                 <thead>
                     <tr>
-                        <th></th>
+                        <th className='theader'>Hamming values</th>
                         {heading.map((head,index) => <th key={index}>{head}</th>)}
                     </tr>
                 </thead>

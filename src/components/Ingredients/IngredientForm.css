@@ -3,7 +3,10 @@
   margin: 2rem auto;
   max-width: 80%;
 }
-
+.errorField{
+  color : #ff2058;
+  font-size: smaller; 
+}
 .form-control label,
 .form-control input {
   display: block;

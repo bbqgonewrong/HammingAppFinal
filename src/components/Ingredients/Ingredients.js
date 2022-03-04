@@ -34,9 +34,11 @@ const Ingredients = () => {
   const [userIngredients, setUserIngredients] = useState([]);
   const [userhammingValue, setUserhammingValue] = useState([]);
   const [userSortedValues, setuserSortedValues] = useState([]);
+  const [showTable, setshowTable] = useState(false);
+  const [showHistory, setshowHistory] = useState(false);
 
   const hammingHandler = ingredient => {
-    
+      setshowTable(true)
       const nums = JSON.stringify(ingredient);
       var obj = JSON.parse(nums);
       var value = Object.keys(obj).map((key) =>( obj[key] ));
@@ -63,6 +65,7 @@ const Ingredients = () => {
   }
 
   const addIngredientHandler = ingredient => {
+    setshowHistory(true)
     setUserIngredients(prevIngredients => [
       ...prevIngredients,
       { id: Math.random().toString(), ...ingredient }
@@ -86,11 +89,9 @@ const Ingredients = () => {
     <div className="App">
       <IngredientForm onAddIngredient={addIngredientHandler} onHamm={hammingHandler} />
 
-      <section>
-        {/* <Search hammingVal={userhammingValue}/> */}
-        
-        <Table  hammingVal={userhammingValue} header={userSortedValues} />,
-        <IngredientList ingredients={userIngredients} onRemoveItem={() => {}} />
+      <section>        
+        {showTable?<Table  hammingVal={userhammingValue} header={userSortedValues} />:''}
+        {showHistory?<IngredientList ingredients={userIngredients} onRemoveItem={() => {}} />:''}
       </section>
     </div>
   );
