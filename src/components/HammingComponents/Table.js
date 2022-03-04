@@ -10,7 +10,7 @@ const Table = props => {
         const closeModal = () => setOpen(false);
         var heading = props.header;
         var body = props.hammingVal;
-        console.log(props.header)
+        //console.log(props.header)
         return (
             <section className='ingredient-form'>
                 
@@ -45,7 +45,7 @@ const Table = props => {
                     </tr>
                 </thead>
                 <tbody>
-                    {body.map((row,index) => <TableRow row={row} ind={index} header={heading} />)}
+                    {body.map((row,index) => <TableRow row={row} ind={index} key={index} header={heading} />)}
                 </tbody>
                 </table>
                 </Card>

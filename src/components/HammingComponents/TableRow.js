@@ -2,8 +2,8 @@ import React from "react";
 const TableRow = props => {
         var i=props.ind;
         var head = props.header;
-        console.log(i);
-        console.log(head[i]);
+        //console.log(i);
+        //console.log(head[i]);
         var row = props.row;
         return (
             <tr>

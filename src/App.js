@@ -4,7 +4,7 @@ import HammingDistance from './components/HammingComponents/HammingDistance';
 
 const App = props => {
   return (
-    <><div class="header">
+    <><div className="header">
       <h1>Hamming Distance Calculator</h1>
     </div><HammingDistance /></>);
 };

@@ -87,7 +87,7 @@ function num5Handler(e){
 
 
   const submitHandler = event => {
-    console.log(`Check for flag:${isEnabled}`)
+    //console.log(`Check for flag:${isEnabled}`)
     if(isEnabled){
       
       props.onAddHistory({ userInput1: number1, userInput2: number2,userInput3:number3,userInput4:number4,userInput5:number5 });

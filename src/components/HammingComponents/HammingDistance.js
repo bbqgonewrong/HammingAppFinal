@@ -44,7 +44,7 @@ const HammingDistance = () => {
       var value = Object.keys(obj).map((key) =>( obj[key] ));
       const sortedVals = value.sort();
       setuserSortedValues(sortedVals);
-      console.log(`Values after sorting : ${sortedVals}`);
+      //console.log(`Values after sorting : ${sortedVals}`);
       const matrix = make2DArray(5,5)
       for (let i = 0; i < sortedVals.length; i++) {
         const element1 = sortedVals[i];
@@ -52,13 +52,13 @@ const HammingDistance = () => {
           const element2 = sortedVals[j];
 
           matrix[i][j] = HammingDistanceCalc(element1,element2)
-          console.log(`${element1} and ${element2}`)
+          //console.log(`${element1} and ${element2}`)
           
         }
         
         
       }
-      console.log(matrix)
+      //console.log(matrix)
       setUserhammingValue(
         matrix
       );
@@ -70,7 +70,7 @@ const HammingDistance = () => {
       ...prevIngredients,
       { id: Math.random().toString(), ...ingredient }
     ]);
-    console.log(ingredient)
+    //console.log(ingredient)
     
     // const dist = HammingDistance(sortedVals[0],sortedVals[1])
     // console.log(`Hamming distance between ${sortedVals[0]} and ${sortedVals[1]} = ${dist}`)
