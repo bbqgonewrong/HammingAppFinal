@@ -78,3 +78,11 @@
   justify-content: space-between;
   flex-direction: row;
 }
+
+.modal{
+  background-color: white;
+  opacity: 1;
+  position: inherit;
+  display: flex;
+  width: 500px;
+}
